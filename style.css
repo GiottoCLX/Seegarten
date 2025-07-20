@@ -750,6 +750,12 @@ html, body {
     grid-template-columns: 1fr !important;
     gap: 2rem;
   }
+    /* Mehr Weißraum links/rechts im Über uns-Block */
+.about-text {
+  border-left: 4px solid var(--accent);
+  padding: var(--space-md) var(--space-sm); /* oben/unten md, links/rechts sm */
+}
+
 
   /* SPEISEKARTE: Bilder in 1 Spalte */
   .menu-image-row {
