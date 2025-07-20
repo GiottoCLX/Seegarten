@@ -668,3 +668,128 @@ a:focus, button:focus, input:focus, select:focus {
 .btn-block {
   margin-top: auto;        /* drückt den Button ans untere Ende der Card */
 }
+
+/* ------------------------------------
+   1) global: kein horizontaler Scroll
+   ------------------------------------ */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ------------------------------------
+   2) mobile‑first tweaks (max-width 768)
+   ------------------------------------ */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    height: 64px;
+    padding: 0 1rem;
+  }
+  .logo {
+    height: 48px;
+  }
+  /* Hamburger einblenden, Desktop‑Nav verstecken */
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  nav.open {
+    display: flex;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.95);
+    flex-direction: column;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+  }
+  nav.open a {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  /* HERO */
+  .hero {
+    margin-top: 64px;
+    height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .hero-content {
+    padding: 1rem;
+  }
+  .hero-tagline {
+    font-size: 1.25rem;
+  }
+  .hero-cta {
+    font-size: 1rem;
+    padding: .6rem 1rem;
+  }
+  .scroll-indicator {
+    bottom: 1rem;
+  }
+
+  /* SECTION TITLES & PADDING */
+  .section {
+    padding: 3rem 1rem;
+  }
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ABOUT‑GRID: 1‑Spalten‑Layout */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+
+  /* SPEISEKARTE: Bilder in 1 Spalte */
+  .menu-image-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .menu-image-wrapper {
+    max-width: 100% !important;
+  }
+
+  /* EVENTS‑GRID: 1 Karte pro Zeile */
+  .events-list {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* GALERIE: 1‑Spalte */
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* KONTAKT‑GRID: 1 Column */
+  .contact-container {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  /* FORM‑Fields full width */
+  .form-group {
+    flex: 1 1 100% !important;
+  }
+  .btn-block {
+    padding: .8rem 0;
+  }
+
+  /* Karten‑Boxen, Buttons, Icons anpassen */
+  .card, .event-card {
+    padding: 1.5rem;
+  }
+  .event-icon {
+    font-size: 2rem;
+  }
+}
