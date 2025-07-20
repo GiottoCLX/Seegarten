@@ -799,3 +799,50 @@ html, body {
     font-size: 2rem;
   }
 }
+
+/* Kontakt-Formular: mehr Abstand, klarere Labels, schönerer Button */
+.contact-form .form-group {
+  margin-bottom: 1.25rem;        /* Abstand zwischen den Feldern */
+}
+
+.contact-form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.contact-form input,
+.contact-form select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color .3s, box-shadow .3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(14,77,146,0.2);
+}
+
+/* Button-Anpassung */
+.contact-form .btn-block {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background .3s, transform .2s;
+}
+
+.contact-form .btn-block:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
